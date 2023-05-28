@@ -1,0 +1,212 @@
+@import 'reset';
+
+html,
+body {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+a {
+	cursor: pointer;
+}
+
+.wrapper {
+	// visibility: hidden; // for loader
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	background-color: $background-color;
+	position: relative;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.title {
+	font-family: 'Dancing Script', cursive;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 58px;
+	color: $text-color;
+
+}
+
+.text {
+	font-family: 'Delius Swash Caps', cursive;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 150%;
+	color: $text-color;
+}
+
+.label {
+	font-family: 'Delius Swash Caps', cursive;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 30px;
+	color: $text-color;
+}
+
+.span {
+	font-family: 'Delius Swash Caps', cursive;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 150%;
+}
+
+.btn-1,
+.btn-2 {
+	width: 260px;
+	height: 90px;
+	font-family: 'Delius Swash Caps', cursive;
+	font-size: 24px;
+	line-height: 30px;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.btn-1 {
+	color: $text-color-light;
+	background-color: $acsent-color;
+
+	&:hover {
+		background-color: $text-color-2;
+	}
+
+	&:active {
+		background-color: $text-color;
+	}
+}
+
+.btn-2 {
+	color: $text-color-2;
+	border: 2px $text-color-2 solid;
+
+	&:hover {
+		background-color: #963952;
+		color: $text-color-light;
+	}
+
+	&:active {
+		background-color: #521F2D;
+		color: $text-color-light;
+	}
+}
+
+
+.container {
+	padding: 0 120px;
+}
+
+/* media */
+
+@media (max-width: 1600px) {
+	.span {
+		font-size: 24px;
+	}
+
+	.btn-1,
+	.btn-2 {
+		font-size: 21px;
+		line-height: 26px;
+	}
+}
+
+
+@media (max-width: 1400px) {
+	.container {
+		padding: 0 100px;
+	}
+
+	.text {
+		font-size: 21px;
+	}
+
+	.title {
+		font-size: 42px;
+		line-height: 50px;
+	}
+
+	.label {
+		font-size: 21px;
+		line-height: 26px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.container {
+		padding: 0 80px;
+	}
+
+	.text {
+		font-size: 18px;
+	}
+
+	.title {
+		font-size: 28px;
+		line-height: 34px;
+	}
+
+	.label {
+		font-size: 18px;
+		line-height: 23px;
+	}
+
+	.span {
+		font-size: 21px;
+	}
+
+	.btn-1,
+	.btn-2 {
+		width: 200px;
+		height: 70px;
+		font-size: 18px;
+		line-height: 23px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 60px;
+	}
+
+	.text {
+		font-size: 16px;
+	}
+
+	.title {
+		font-size: 24px;
+		line-height: 29px;
+	}
+
+	.label {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.span {
+		font-size: 16px;
+	}
+
+	.btn-1,
+	.btn-2 {
+		width: 140px;
+		height: 55px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
+@media (max-width: 500px) {
+	.container {
+		padding: 0 40px;
+	}
+}

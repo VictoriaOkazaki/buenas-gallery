@@ -1,0 +1,78 @@
+<template>
+    <div class="ellipse">
+        <svg class="el-svg" width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="el-path"
+                d="M29.5 19.61C29.5 24.9251 27.8515 29.7185 25.2095 33.1726C22.5678 36.6262 18.9537 38.72 15 38.72C11.0463 38.72 7.43224 36.6262 4.79054 33.1726C2.14848 29.7185 0.5 24.9251 0.5 19.61C0.5 14.2949 2.14848 9.50147 4.79054 6.04741C7.43224 2.59383 11.0463 0.5 15 0.5C18.9537 0.5 22.5678 2.59383 25.2095 6.04741C27.8515 9.50147 29.5 14.2949 29.5 19.61Z"
+                stroke="#250C00" />
+        </svg>
+    </div>
+    <div class="ellipse">
+        <svg class="el-svg" width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="el-path"
+                d="M29.5 19.61C29.5 24.9251 27.8515 29.7185 25.2095 33.1726C22.5678 36.6262 18.9537 38.72 15 38.72C11.0463 38.72 7.43224 36.6262 4.79054 33.1726C2.14848 29.7185 0.5 24.9251 0.5 19.61C0.5 14.2949 2.14848 9.50147 4.79054 6.04741C7.43224 2.59383 11.0463 0.5 15 0.5C18.9537 0.5 22.5678 2.59383 25.2095 6.04741C27.8515 9.50147 29.5 14.2949 29.5 19.61Z"
+                stroke="#250C00" />
+        </svg>
+    </div>
+    <div class="ellipse">
+        <svg class="el-svg" width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="el-path"
+                d="M29.5 19.61C29.5 24.9251 27.8515 29.7185 25.2095 33.1726C22.5678 36.6262 18.9537 38.72 15 38.72C11.0463 38.72 7.43224 36.6262 4.79054 33.1726C2.14848 29.7185 0.5 24.9251 0.5 19.61C0.5 14.2949 2.14848 9.50147 4.79054 6.04741C7.43224 2.59383 11.0463 0.5 15 0.5C18.9537 0.5 22.5678 2.59383 25.2095 6.04741C27.8515 9.50147 29.5 14.2949 29.5 19.61Z"
+                stroke="#250C00" />
+        </svg>
+    </div>
+    <div class="ellipse">
+        <svg class="el-svg" width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="el-path"
+                d="M29.5 19.61C29.5 24.9251 27.8515 29.7185 25.2095 33.1726C22.5678 36.6262 18.9537 38.72 15 38.72C11.0463 38.72 7.43224 36.6262 4.79054 33.1726C2.14848 29.7185 0.5 24.9251 0.5 19.61C0.5 14.2949 2.14848 9.50147 4.79054 6.04741C7.43224 2.59383 11.0463 0.5 15 0.5C18.9537 0.5 22.5678 2.59383 25.2095 6.04741C27.8515 9.50147 29.5 14.2949 29.5 19.61Z"
+                stroke="#250C00" />
+        </svg>
+    </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+.ellipse {
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:first-child {
+        .el-svg {
+            fill: $acsent-color;
+        }
+
+        .el-path {
+            stroke: none;
+        }
+
+    }
+}
+
+// .el-svg {
+//     fill: $acsent-color;
+// }
+
+.el-path {
+    stroke: $text-color;
+}
+@media (max-width: 1400px) {
+    .ellipse {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 1000px) {
+    .ellipse {
+        margin-bottom: 8px;
+    }
+    .ellipse,
+    .el-svg {
+        width: 18px;
+        height: 23px;
+    }
+}
+</style>

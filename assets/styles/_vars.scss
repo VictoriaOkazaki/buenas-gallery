@@ -1,0 +1,10 @@
+$background-color: #FFD4C1;
+$acsent-color: #FF4F00;
+
+$text-color: #250C00;
+$text-color-light: #FFDECF;
+$text-color-2: #833939;
+
+%border {
+    border-bottom: 1px $text-color solid;
+}
