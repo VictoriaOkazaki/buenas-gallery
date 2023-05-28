@@ -1,0 +1,46 @@
+.ellipse {
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .el-svg {
+        width: 18px;
+        height: 23px;
+    }
+}
+
+.ellipse.active {
+    .el-svg {
+        fill: $acsent-color;
+    }
+
+    .el-path {
+        stroke: none;
+    }
+}
+
+// .el-svg {
+//     fill: $acsent-color;
+// }
+
+.el-path {
+    stroke: $text-color;
+}
+@media (max-width: 1400px) {
+    .ellipse {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 1000px) {
+    .ellipse {
+        margin-bottom: 8px;
+    }
+    .ellipse,
+    .el-svg {
+        width: 18px;
+        height: 23px;
+    }
+}

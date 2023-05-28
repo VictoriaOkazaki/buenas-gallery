@@ -36,6 +36,7 @@
 <style lang="scss" scoped>
 .ellipse {
     margin-bottom: 40px;
+    cursor: pointer;
 
     &:last-child {
         margin-bottom: 0;
