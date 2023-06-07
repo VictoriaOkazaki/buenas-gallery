@@ -1,9 +1,12 @@
 <template>
-    <Header/>
+    <Header />
     <Hero />
     <Menu />
     <Books />
     <Art />
+    <Gallery />
+    <Contacts />
+    <Footer />
 </template>
 
 <script setup>

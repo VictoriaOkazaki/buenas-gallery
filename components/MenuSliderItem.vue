@@ -1,6 +1,7 @@
 <template>
     <div class="menu__slider-item">
         <img :src="item.src" :alt="item.alt" class="menu__slider-img">
+        <img class="plus" src="../assets/images/plus.svg" alt="plus">
         <div class="menu__slider-desc">
             <span class="menu__slider-title label">{{ item.title }}</span>
             <span class="menu__slider-price label">{{ item.price }} $</span>
@@ -17,9 +18,26 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
+.plus {
+    display: none;
+}
+.menu__slider-item:hover {
+    .menu__slider-img {
+        opacity: .4;
+    }
+    .plus {
+        display: block;
+        position: absolute;
+        bottom: 50%;
+        left: calc(50% - 100px/2);
+    }
+}
 .menu {
     &__slider-item {
         width: 260px;
+        padding: 0 5px;
+        cursor: pointer;
+        position: relative;
     }
 
     &__slider-img {
@@ -61,6 +79,13 @@ defineProps({
 }
 
 @media (max-width: 1000px) {
+    .menu__slider-item:hover {
+    .plus {
+        width: 50px;
+        bottom: 60%;
+        left: calc(50% - 50px/2);
+    }
+}
     .menu {
         &__slider-item {
             width: 166px;
@@ -78,6 +103,11 @@ defineProps({
 }
 
 @media (max-width: 700px) {
+    .menu__slider-item:hover {
+    .plus {
+        bottom: 55%;
+    }
+}
     .menu {
         &__slider-item {
             width: 140px;

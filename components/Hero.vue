@@ -9,10 +9,7 @@
                         <p class="offer__text text">Our cafe is&nbsp;a&nbsp;cozy coffee shop serving delicious organic
                             coffee&nbsp;&&nbsp;fresh cuisine. We have a&nbsp;large library and&nbsp;art exhibits inside.
                             The&nbsp;atmosphere in&nbsp;our&nbsp;cafe is&nbsp;inspiring.</p>
-                        <div class="offer__btns">
-                            <a href="#" class="offer__btn btn-1">Reserve a&nbsp;table</a>
-                            <a href="#" class="offer__btn btn-2">Order online</a>
-                        </div>
+                        <OfferButtons />
                     </div>
                     <img src="../assets/images/hero-img.png" alt="art" class="hero__img">
                 </div>
@@ -91,16 +88,6 @@
     &__text {
         margin: 30px 0 45px;
     }
-
-    &__btns {
-        display: flex;
-    }
-
-    &__btn {
-        &:first-child {
-            margin-right: 60px;
-        }
-    }
 }
 
 @media (max-width: 1750px) {
@@ -149,12 +136,6 @@
 
         &__text {
             margin: 20px 0 35px;
-        }
-
-        &__btn {
-            &:first-child {
-                margin-right: 40px;
-            }
         }
     }
 }
@@ -222,12 +203,6 @@
         &__text {
             margin: 25px 0 50px;
         }
-
-        &__btn {
-            &:first-child {
-                margin-right: 30px;
-            }
-        }
     }
 }
 @media (max-width: 768px) {
@@ -262,16 +237,6 @@
     &__title {
         font-size: 42px;
         line-height: 51px;
-    }
-}
-}
-@media (max-width: 400px) {
-.offer {
-    
-    &__btn {
-        &:first-child {
-            margin-right: 7px;
-        }
     }
 }
 }

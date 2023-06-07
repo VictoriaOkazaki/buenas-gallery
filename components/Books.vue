@@ -1,5 +1,5 @@
 <template>
-    <section class="books">
+    <section class="books" id="books">
         <div class="container">
             <div class="books__inner">
                 <div class="books-half">

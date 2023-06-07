@@ -21,6 +21,8 @@ defineProps({
 .art__slider {
     &-item {
         margin-top: 20px;
+        width: 100%;
+        padding: 0 5px;
     }
 
     &-title {
@@ -36,5 +38,81 @@ defineProps({
     &-img {
         width: 405px;
         height: 297px;
+    }
+}
+
+@media (max-width: 1700px) {
+    .art__slider {
+        &-img {
+            width: 350px;
+            height: 257px;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .art__slider {
+        &-img {
+            width: 300px;
+            height: 220px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .art__slider {
+        &-imgs {
+            margin-top: 80px;
+            flex-wrap: wrap;
+        }
+
+        &-img {
+            width: 300px;
+            height: 220px;
+
+            &:last-child {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .art__slider {
+        &-item {
+            margin-top: 15px;
+        }
+
+        &-imgs {
+            margin-top: 60px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .art__slider {
+        &-imgs {
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        &-img {
+            width: 350px;
+            height: 257px;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin: 0 0 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .art__slider {
+        &-img {
+            width: 284px;
+            height: 210px;
+        }
     }
 }</style>
