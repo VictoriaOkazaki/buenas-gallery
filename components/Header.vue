@@ -1,6 +1,6 @@
 <template>
     <title>Buendia's Gallery</title>
-    <meta name="Art cafe with books">
+    <meta name="description" content="Art cafe with books">
     <RawHeader @switchBurger="switchBurger" class="main-header" />
     <Transition name="fade">
         <div v-show="isBurgerWindow" class="burger-header">
