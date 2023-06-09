@@ -1,4 +1,6 @@
 <template>
+    <title>Buendia's Gallery</title>
+    <meta name="Art cafe with books">
     <RawHeader @switchBurger="switchBurger" class="main-header" />
     <Transition name="fade">
         <div v-show="isBurgerWindow" class="burger-header">
@@ -6,12 +8,12 @@
           <div class="burger-window">
               <div class="container burger-window-cont">
                   <div class="burger-window__inner">
-                      <img src="../assets/images/gallery/side.svg" alt="buenas coffee" class="burger-window__side">
+                      <img src="../assets/images/gallery/side.svg" alt="buendias coffee" class="burger-window__side">
                       <HeaderMenu class="burger__menu" />
                       <HeaderInfo />
                   </div>
               </div>
-              <img src="../assets/images/hero-img.png" alt="art" class="burger-window__img">
+              <img src="../assets/images/hero-img.webp" alt="art" class="burger-window__img">
           </div>
       </div>
     </Transition>

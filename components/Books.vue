@@ -22,12 +22,12 @@
                         </div>
                     </div>
                     <div class="books__img-cont" id="book-2">
-                        <img src="../assets/images/books-1.png" alt="bookcase" class="books__img">
+                        <img src="../assets/images/books-1.webp" alt="bookcase" class="books__img">
                     </div>
                 </div>
                 <div class="books-half">
                     <div class="books__img-cont" id="book-3">
-                        <img src="../assets/images/books-2.png" alt="a book and a cup of coffee" class="books__img">
+                        <img src="../assets/images/books-2.webp" alt="a book and a cup of coffee" class="books__img">
                     </div>
                     <div class="books__list-cont" id="book-4">
                         <ul class="books__list">
@@ -178,11 +178,11 @@
     }
 
     #book-2 {
-        background-image: url(../assets/images/books-1.png);
+        background-image: url(../assets/images/books-1.webp);
     }
 
     #book-3 {
-        background-image: url(../assets/images/books-2.png);
+        background-image: url(../assets/images/books-2.webp);
     }
 }
 

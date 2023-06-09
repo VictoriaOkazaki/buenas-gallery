@@ -8,21 +8,21 @@
                 <div class="gallery__content">
                     <div class="gallery__imgs">
                         <div class="gallery__imgs-list gallery__imgs-list1">
-                            <img src="../assets/images/gallery/gal1-1.png" alt="building" class="gallery__img gallery__img-ver">
-                            <img src="../assets/images/gallery/gal1-2.png" alt="statuette & newspaper" class="gallery__img gallery__img-ver">
+                            <img src="../assets/images/gallery/gal1-1.webp" alt="building" class="gallery__img gallery__img-ver">
+                            <img src="../assets/images/gallery/gal1-2.webp" alt="statuette & newspaper" class="gallery__img gallery__img-ver">
                         </div>
-                        <img src="../assets/images/gallery/gal-center.png" alt="cheese pancake"
+                        <img src="../assets/images/gallery/gal-center.webp" alt="cheese pancake"
                             class="gallery__img gallery__img-hor gallery__img-center">
                         <div class="gallery__imgs-list gallery__imgs-list2">
-                            <img src="../assets/images/gallery/gal2-1.png" alt="coffee cup & book" class="gallery__img gallery__img-hor">
-                            <img src="../assets/images/gallery/gal2-2.png" alt="books-lightings" class="gallery__img gallery__img-hor">
+                            <img src="../assets/images/gallery/gal2-1.webp" alt="coffee cup & book" class="gallery__img gallery__img-hor">
+                            <img src="../assets/images/gallery/gal2-2.webp" alt="books-lightings" class="gallery__img gallery__img-hor">
                         </div>
                         <div class="gallery__imgs-list gallery__imgs-list3">
-                            <img src="../assets/images/gallery/gal3-1.png" alt="bookshelf" class="gallery__img gallery__img-ver">
-                            <img src="../assets/images/gallery/gal3-2.png" alt="pie" class="gallery__img gallery__img-ver">
+                            <img src="../assets/images/gallery/gal3-1.webp" alt="bookshelf" class="gallery__img gallery__img-ver">
+                            <img src="../assets/images/gallery/gal3-2.webp" alt="pie" class="gallery__img gallery__img-ver">
                         </div>
                     </div>
-                    <img src="../assets/images/gallery/side.svg" alt="buena's coffee" class="gallery__side-img">
+                    <img src="../assets/images/gallery/side.svg" alt="buendia's coffee" class="gallery__side-img">
                 </div>
             </div>
         </div>

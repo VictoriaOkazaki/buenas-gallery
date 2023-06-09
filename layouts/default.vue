@@ -1,7 +1,9 @@
 <template>
-    <div class="wrapper">
+    <html lang="en">
+        <div class="wrapper">
         <slot />
     </div>
+    </html>
 </template>
 
 <script setup>

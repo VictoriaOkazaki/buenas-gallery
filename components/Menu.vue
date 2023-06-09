@@ -66,97 +66,97 @@ const getSlidesPerView = (windowWidth) => {
 
 const slides = [
     {
-        src: 'images/menu/good-1.png',
+        src: 'images/menu/good-1.webp',
         title: 'South donut',
         price: '5.6',
         alt: 'donut'
     },
     {
-        src: 'images/menu/good-2.png',
+        src: 'images/menu/good-2.webp',
         title: 'Cherry croisant',
         price: '3.8',
         alt: 'croissant'
     },
     {
-        src: 'images/menu/good-3.png',
+        src: 'images/menu/good-3.webp',
         title: 'Granny’s cake',
         price: '10.8',
         alt: 'cake'
     },
     {
-        src: 'images/menu/good-4.png',
+        src: 'images/menu/good-4.webp',
         title: 'Buenas mochis',
         price: '7.6',
         alt: 'mochi'
     },
     {
-        src: 'images/menu/good-1.png',
+        src: 'images/menu/good-1.webp',
         title: 'South donut',
         price: '5.6',
         alt: 'donut'
     },
     {
-        src: 'images/menu/good-2.png',
+        src: 'images/menu/good-2.webp',
         title: 'Cherry croisant',
         price: '3.8',
         alt: 'croissant'
     },
     {
-        src: 'images/menu/good-3.png',
+        src: 'images/menu/good-3.webp',
         title: 'Granny’s cake',
         price: '10.8',
         alt: 'cake'
     },
     {
-        src: 'images/menu/good-4.png',
+        src: 'images/menu/good-4.webp',
         title: 'Buenas mochis',
         price: '7.6',
         alt: 'mochi'
     },
     {
-        src: 'images/menu/good-1.png',
+        src: 'images/menu/good-1.webp',
         title: 'South donut',
         price: '5.6',
         alt: 'donut'
     },
     {
-        src: 'images/menu/good-2.png',
+        src: 'images/menu/good-2.webp',
         title: 'Cherry croisant',
         price: '3.8',
         alt: 'croissant'
     },
     {
-        src: 'images/menu/good-3.png',
+        src: 'images/menu/good-3.webp',
         title: 'Granny’s cake',
         price: '10.8',
         alt: 'cake'
     },
     {
-        src: 'images/menu/good-4.png',
+        src: 'images/menu/good-4.webp',
         title: 'Buenas mochis',
         price: '7.6',
         alt: 'mochi'
     },
     {
-        src: 'images/menu/good-1.png',
+        src: 'images/menu/good-1.webp',
         title: 'South donut',
         price: '5.6',
         alt: 'donut'
     },
     {
-        src: 'images/menu/good-2.png',
+        src: 'images/menu/good-2.webp',
         title: 'Cherry croisant',
         price: '3.8',
         alt: 'croissant'
     },
     {
-        src: 'images/menu/good-3.png',
+        src: 'images/menu/good-3.webp',
         title: 'Granny’s cake',
         price: '10.8',
         alt: 'cake'
     },
     {
-        src: 'images/menu/good-4.png',
+        src: 'images/menu/good-4.webp',
         title: 'Buenas mochis',
         price: '7.6',
         alt: 'mochi'

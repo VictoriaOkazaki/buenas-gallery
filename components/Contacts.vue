@@ -7,7 +7,7 @@
             <div class="contacts__inner">
                 <div class="contacts__content">
                     <div class="contacts__map">
-                        <iframe class="contacts__map-frame"
+                        <iframe class="contacts__map-frame" title="Art cafe"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2470.0041694523543!2d-1.262249823548184!3d51.7512473218698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a517c88c63%3A0xa076d20f99ccfb99!2sArt%20Cafe!5e0!3m2!1sru!2saz!4v1685538358894!5m2!1sru!2saz"
                             width="830" height="500" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -32,7 +32,7 @@
                             closes.</p>
                         <OfferButtons class="contacts__btns" />
                     </div>
-                    <img src="../assets/images/contact.png" alt="cafe terraced street" class="contacts__img">
+                    <img src="../assets/images/contact.webp" alt="cafe terraced street" class="contacts__img">
                 </div>
             </div>
         </div>

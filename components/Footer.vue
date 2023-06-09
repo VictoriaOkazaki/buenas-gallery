@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="container footer-cont">
-            <img src="../assets/images/footer-img.png" alt="coffee cuo & cafe logo" class="footer__img">
+            <img src="../assets/images/footer-img.webp" alt="coffee cuo & cafe logo" class="footer__img">
             <div class="footer__inner">
                 <span class="footer__copyright label">@2023 Buendia’s Gallery. All rights reserved.</span>
                 <div class="footer__social">

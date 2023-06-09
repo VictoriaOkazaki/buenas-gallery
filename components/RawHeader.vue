@@ -8,9 +8,9 @@
                 </div>
                 <HeaderMenu class="header__menu" />
                 <NuxtLink to="/">
-                    <img src="../assets/images/logo.png" alt="logo" class="logo">
+                    <img src="../assets/images/logo.webp" alt="logo" class="logo">
                 </NuxtLink>
-                <a class="cart">
+                <a href="#" class="cart">
                     <img class="cart__img" src="../assets/images/cart.svg" alt="cart">
                     <div class="cart__amount">2</div>
                 </a>

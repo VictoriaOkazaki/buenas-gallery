@@ -11,12 +11,13 @@
                             The&nbsp;atmosphere in&nbsp;our&nbsp;cafe is&nbsp;inspiring.</p>
                         <OfferButtons />
                     </div>
-                    <img src="../assets/images/hero-img.png" alt="art" class="hero__img">
+                    <img src="../assets/images/hero-img.webp" alt="art" class="hero__img" >
+                   
                 </div>
                 <div class="hero-bottom">
                     <div class="hero-bottom-antiborder"></div>
-                    <img src="../assets/images/bottom-img-1.png" alt="chair" class="hero-bottom__img-1">
-                    <img src="../assets/images/bottom-img-2.png" alt="books and coffee" class="hero-bottom__img-2">
+                    <img src="../assets/images/bottom-img-1.webp" alt="chair" class="hero-bottom__img-1">
+                    <img src="../assets/images/bottom-img-2.webp" alt="books and coffee" class="hero-bottom__img-2">
                 </div>
             </div>
         </div>
