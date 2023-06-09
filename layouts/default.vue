@@ -6,7 +6,7 @@
     </html>
 </template>
 
-<script setup>
+<script setup async>
 useHead({
     link: [
         {
