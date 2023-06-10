@@ -7,26 +7,27 @@
 </template>
 
 <script setup>
-useHead({
-    link: [
-        {
-            href: 'https://fonts.googleapis.com',
-            rel: 'preconnect',
-            defer: true
-        },
-        {
-            href: 'https://fonts.gstatic.com',
-            rel: 'preconnect',
-            crossorigin: '',
-            defer: true
-        },
-        {
-            href: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Delius+Swash+Caps&display=swap',
-            rel: 'stylesheet',
-            defer: true
-        },
-    ]
-})
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('../assets/fonts/DancingScript-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('../assets/fonts/DancingScript-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Delius Swash Caps';
+  src: url('../assets/fonts/DeliusSwashCaps-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
