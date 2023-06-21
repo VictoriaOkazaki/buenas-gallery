@@ -1,7 +1,7 @@
 <template>
     <div class="menu__slider-item">
         <img :src="item.src" :alt="item.alt" class="menu__slider-img">
-        <img class="plus" src="../assets/images/plus.svg" alt="plus">
+        <img @click="showGoodPopup(item)" class="plus" src="../assets/images/plus.svg" alt="plus">
         <div class="menu__slider-desc">
             <span class="menu__slider-title label">{{ item.title }}</span>
             <span class="menu__slider-price label">{{ item.price }} $</span>
@@ -44,6 +44,7 @@ defineProps({
         margin-bottom: 30px;
         width: 260px;
         height: 340px;
+        transition: all .8s ease-out;
     }
 
     &__slider-desc {

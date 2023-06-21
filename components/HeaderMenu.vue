@@ -5,7 +5,8 @@
 </template>
 
 <script setup>
-const links = [
+const route = useRoute()
+let links = [
     {
         title: 'Menu',
         href: '#menu'
@@ -27,6 +28,34 @@ const links = [
         href: '#contacts'
     }
 ];
+
+if (route.name === 'menu') {
+    links = [
+        {
+            title: 'Home',
+            href: '/'
+        },
+        {
+            title: 'Reserve a table',
+            href: '/reserve'
+        }
+    ]
+} else if (route.name === 'menu-category') {
+    links = [
+        {
+            title: 'Home',
+            href: '/'
+        },
+        {
+            title: 'Reserve a table',
+            href: '/reserve'
+        },
+        {
+            title: 'Menu',
+            href: '/menu'
+        }
+    ]
+}
 </script>
 
 <style lang="scss" scoped>
@@ -80,4 +109,5 @@ const links = [
             margin-bottom: 20px;
         }
     }
-}</style>
+}
+</style>

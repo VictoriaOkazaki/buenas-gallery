@@ -22,7 +22,7 @@
                             <img src="../assets/images/gallery/gal3-2.webp" alt="pie" class="gallery__img gallery__img-ver">
                         </div>
                     </div>
-                    <img src="../assets/images/gallery/side.svg" alt="buendia's coffee" class="gallery__side-img">
+                    <img src="../assets/images/gallery/side.webp" alt="buendia's coffee" class="gallery__side-img">
                 </div>
             </div>
         </div>
@@ -54,10 +54,12 @@
         margin-top: 90px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__side-img {
         width: 91px;
+        height: 617px;
     }
 
     &__imgs {

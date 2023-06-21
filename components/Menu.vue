@@ -6,15 +6,20 @@
         <div class="container">
             <div class="menu__inner">
                 <div class="menu__top">
-                    <a href="#" class="menu__btn btn-2">See all menu</a>
+                    <NuxtLink href="menu" class="menu__btn btn-2">See all menu</NuxtLink>
                     <p class="menu__text text">We differentiate ourselves from&nbsp;others by&nbsp;offering a&nbsp;large
                         variety of&nbsp;free range, organic, gluten&nbsp;free and&nbsp;vegan products.</p>
                 </div>
                 <ul class="menu__filters">
-                    <li class="menu__filter label" v-for="filter in filters">{{ filter.title }}</li>
+                    <li class="menu__filter label" v-for="filter in filters"
+                        :class="{'active': category === filter.category}"
+                        @click="category = filter.category">
+                        {{ filter.title }}
+                    </li>
                 </ul>
-                <div class="menu__slider">
-                    <Slider :slides="slides" :getSlidesPerView="getSlidesPerView">
+                
+                <div class="menu__slider">  
+                    <Slider :slides="filteredGoods" :getSlidesPerView="getSlidesPerView">
                         <template v-slot="slotProps">
                             <div class="menu__slider-imgs" >
                                 <MenuSliderItem v-for="slideItem in slotProps.slides" :item="slideItem" />
@@ -35,24 +40,6 @@
 </template>
 
 <script setup>
-const filters = [
-    {
-        title: 'Coffee'
-    },
-    {
-        title: 'Tea'
-    },
-    {
-        title: 'Cocktails'
-    },
-    {
-        title: 'Desserts'
-    },
-    {
-        title: 'Foods'
-    }
-]
-
 const getSlidesPerView = (windowWidth) => {
     let slidesPerView = 2
     if (windowWidth > 500) {
@@ -64,104 +51,9 @@ const getSlidesPerView = (windowWidth) => {
     return slidesPerView
 }
 
-const slides = [
-    {
-        src: 'images/menu/good-1.webp',
-        title: 'South donut',
-        price: '5.6',
-        alt: 'donut'
-    },
-    {
-        src: 'images/menu/good-2.webp',
-        title: 'Cherry croisant',
-        price: '3.8',
-        alt: 'croissant'
-    },
-    {
-        src: 'images/menu/good-3.webp',
-        title: 'Granny’s cake',
-        price: '10.8',
-        alt: 'cake'
-    },
-    {
-        src: 'images/menu/good-4.webp',
-        title: 'Buenas mochis',
-        price: '7.6',
-        alt: 'mochi'
-    },
-    {
-        src: 'images/menu/good-1.webp',
-        title: 'South donut',
-        price: '5.6',
-        alt: 'donut'
-    },
-    {
-        src: 'images/menu/good-2.webp',
-        title: 'Cherry croisant',
-        price: '3.8',
-        alt: 'croissant'
-    },
-    {
-        src: 'images/menu/good-3.webp',
-        title: 'Granny’s cake',
-        price: '10.8',
-        alt: 'cake'
-    },
-    {
-        src: 'images/menu/good-4.webp',
-        title: 'Buenas mochis',
-        price: '7.6',
-        alt: 'mochi'
-    },
-    {
-        src: 'images/menu/good-1.webp',
-        title: 'South donut',
-        price: '5.6',
-        alt: 'donut'
-    },
-    {
-        src: 'images/menu/good-2.webp',
-        title: 'Cherry croisant',
-        price: '3.8',
-        alt: 'croissant'
-    },
-    {
-        src: 'images/menu/good-3.webp',
-        title: 'Granny’s cake',
-        price: '10.8',
-        alt: 'cake'
-    },
-    {
-        src: 'images/menu/good-4.webp',
-        title: 'Buenas mochis',
-        price: '7.6',
-        alt: 'mochi'
-    },
-    {
-        src: 'images/menu/good-1.webp',
-        title: 'South donut',
-        price: '5.6',
-        alt: 'donut'
-    },
-    {
-        src: 'images/menu/good-2.webp',
-        title: 'Cherry croisant',
-        price: '3.8',
-        alt: 'croissant'
-    },
-    {
-        src: 'images/menu/good-3.webp',
-        title: 'Granny’s cake',
-        price: '10.8',
-        alt: 'cake'
-    },
-    {
-        src: 'images/menu/good-4.webp',
-        title: 'Buenas mochis',
-        price: '7.6',
-        alt: 'mochi'
-    },
-]
+const {filters, allGoods} = useGoods()
+
+const { category, filteredGoods } = useFilteredGoods(allGoods)
 </script>
 
 <style lang="scss" scoped>
@@ -209,6 +101,9 @@ const slides = [
         &:hover {
             color: $acsent-color;
         }
+    }
+    &__filter.active {
+        color: $acsent-color;
     }
 
     &__slider {

@@ -1,7 +1,7 @@
 <template>
     <div class="offer__btns">
-        <a href="#" class="offer__btn btn-1">Reserve a&nbsp;table</a>
-        <a href="#" class="offer__btn btn-2">Order online</a>
+        <a href="/reserve" class="offer__btn btn-1">Reserve a&nbsp;table</a>
+        <NuxtLink href="/menu" class="offer__btn btn-2">Order online</NuxtLink>
     </div>
 </template>
 

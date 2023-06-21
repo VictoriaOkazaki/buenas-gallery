@@ -1,5 +1,5 @@
 <template>
-    <swiper :modules="[Virtual, Controller]" virtual @swiper="setControlledSwiper" @slideChange="onSlideChange">
+    <swiper v-if="inited" :modules="[Virtual, Controller]" virtual @swiper="setControlledSwiper" @slideChange="onSlideChange">
         <swiper-slide v-for="(slideGroup, index) in sliderItemsGroups" :key="index" :virtualIndex="index">  
             <slot :slides="slideGroup" />
         </swiper-slide>
@@ -12,7 +12,6 @@
 import 'swiper/css';
 import { Virtual, Controller } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { useWindowSizes } from '~/hooks/useWindowSizes';
 
 const props = defineProps({
     getSlidesPerView: {
@@ -57,6 +56,12 @@ const sliderItemsGroups = computed(() => {
         return groups.slice(0, 4)
     }
     return groups
+})
+const inited = ref(true)
+watch(() => props.slides, async() => {
+    inited.value = false
+    await nextTick()
+    inited.value = true
 })
 </script>
 

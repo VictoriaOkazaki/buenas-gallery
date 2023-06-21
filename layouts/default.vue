@@ -1,8 +1,10 @@
 <template>
     <html lang="en">
         <div class="wrapper">
-        <slot />
-    </div>
+          <slot />
+          <GoodPopup />
+          <Cart />
+      </div>
     </html>
 </template>
 

@@ -6,7 +6,7 @@
           <div class="burger-window">
               <div class="container burger-window-cont">
                   <div class="burger-window__inner">
-                      <img src="../assets/images/gallery/side.svg" alt="buendias coffee" class="burger-window__side">
+                      <img src="../assets/images/gallery/side.webp" alt="buendias coffee" class="burger-window__side">
                       <HeaderMenu class="burger__menu" />
                       <HeaderInfo />
                   </div>
@@ -34,23 +34,6 @@ const switchBurger = () => {
 }
 .fade-leave-active {
   animation: fadeOut .5s ease-out;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 .burger-header {

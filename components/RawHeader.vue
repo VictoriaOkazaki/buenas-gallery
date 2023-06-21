@@ -1,7 +1,8 @@
 <template>
     <header class="header">
         <div class="container">
-            <div class="header__inner">
+            <div class="header__inner"
+                :class="{'border-none': route.name !== 'index'}">
                 <div @click="switchBurger" class="burger">
                     <div id="burger-line-1"></div>
                     <div id="burger-line-2"></div>
@@ -21,6 +22,7 @@
 </template>
 
 <script setup>
+const route = useRoute()
 const emit = defineEmits(['switchBurger'])
 const switchBurger = () => {
     emit('switchBurger')
@@ -47,6 +49,10 @@ const switchBurger = () => {
         justify-content: space-between;
         border-left: 1px solid $text-color;
         padding: 25px 0 15px;
+    }
+
+    &__inner.border-none {
+        border-left: none;
     }
 }
 

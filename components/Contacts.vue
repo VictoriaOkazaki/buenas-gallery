@@ -14,8 +14,8 @@
                         <div class="contacts__map-bg"></div>
                     </div>
                     <div class="contacts__content-block">
-                        <h4 class="contacts__subtitle contacts__subtitle-1">Brentwood, 3601 Farm Meadow Drive</h4>
-                        <h4 class="contacts__subtitle contacts__subtitle-2">+1 205-538-1468</h4>
+                        <h3 class="contacts__subtitle contacts__subtitle-1">Brentwood, 3601 Farm Meadow Drive</h3>
+                        <h3 class="contacts__subtitle contacts__subtitle-2">+1 205-538-1468</h3>
                         <p class="contacts__text contacts__text-1 text">Drop in to relax and get enjoy reading the best
                             books while having great
                             meals. Contemplate art exhibits, discuss them with a cup of fresh coffe in your hand. Get in
@@ -27,7 +27,7 @@
                 </div>
                 <div class="contacts__content">
                     <div class="contacts__content-block">
-                        <h4 class="contacts__subtitle contacts__subtitle-1">We’re open everyday from 10:00 to 1:00</h4>
+                        <h3 class="contacts__subtitle contacts__subtitle-1">We’re open everyday from 10:00 to 1:00</h3>
                         <p class="contacts__text contacts__text-3 text">The kitchen stops working 30 minutes before the cafe
                             closes.</p>
                         <OfferButtons class="contacts__btns" />
