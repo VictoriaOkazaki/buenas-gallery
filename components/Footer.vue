@@ -174,7 +174,6 @@
         }
         &__social {
             flex-direction: column;
-            margin-right: 80px;
         }
 
         &__social-item {
@@ -189,13 +188,6 @@
 
         &__social-title {
             font-size: 12px;
-        }
-    }
-}
-@media (max-width: 400px) {
-    .footer {
-        &__social {
-            margin-right: 40px;
         }
     }
 }

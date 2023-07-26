@@ -33,6 +33,10 @@ button {
 	flex: 0 0 auto;
 }
 
+.reserve-bg {
+	background-color: $text-color;
+}
+
 .title {
 	font-family: 'Dancing Script', cursive;
 	font-weight: 400;
@@ -108,9 +112,55 @@ button {
 	}
 }
 
+.close {
+	width: 57px;
+	height: 57px;
+	position: absolute;
+	right: 30px;
+	top: 30px;
+}
 
 .container {
 	padding: 0 120px;
+}
+
+.popup {
+	position: fixed;
+	background-color: rgba(37, 12, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__inner {
+		width: 60%;
+		height: 550px;
+		border-radius: 40px;
+		background-color: $text-color;
+		position: relative;
+		padding: 0 90px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__add {
+		position: absolute;
+		bottom: 30px;
+		right: 140px;
+	}
+}
+
+.reserve {
+	background-color: $text-color;
+	padding: 90px 0 120px;
+}
+
+.reserve-btn {
+	position: absolute;
+	bottom: 0;
+	right: 163px;
 }
 
 /* media */
@@ -124,6 +174,20 @@ button {
 	.btn-2 {
 		font-size: 21px;
 		line-height: 26px;
+	}
+
+	.popup {
+		&__inner {
+			width: 68%;
+		}
+
+		&__add {
+			right: 80px;
+		}
+	}
+
+	.reserve-btn {
+		right: 60px;
 	}
 }
 
@@ -145,6 +209,28 @@ button {
 	.label {
 		font-size: 21px;
 		line-height: 26px;
+	}
+
+	.popup {
+		&__inner {
+			width: 84%;
+		}
+	}
+
+	.reserve {
+		padding: 60px 0 90px;
+	}
+
+	.reserve-btn {
+		right: 0;
+	}
+}
+
+@media (max-width: 1200px) {
+	.popup {
+		&__add {
+			right: 30px;
+		}
 	}
 }
 
@@ -178,6 +264,17 @@ button {
 		font-size: 18px;
 		line-height: 23px;
 	}
+
+	.close {
+		width: 40px;
+		height: 40px;
+	}
+
+	.popup {
+		&__inner {
+			padding: 0 60px;
+		}
+	}
 }
 
 @media (max-width: 768px) {
@@ -210,13 +307,54 @@ button {
 		font-size: 16px;
 		line-height: 20px;
 	}
+
+	.close {
+		right: 20px;
+		top: 20px;
+	}
+}
+
+@media (max-width: 700px) {
+	.popup {
+		&__inner {
+			padding: 40px 60px;
+			align-items: baseline;
+		}
+
+		&__add {
+			right: 20px;
+			bottom: 20px;
+		}
+	}
+
+	.reserve {
+		padding: 40px 0 60px;
+	}
 }
 
 @media (max-width: 500px) {
 	.container {
 		padding: 0 40px;
 	}
+
 	.span {
 		font-size: 16px;
+	}
+}
+
+@media (max-width: 400px) {
+	.popup {
+		&__add {
+			bottom: 10px;
+			right: 10px;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.popup {
+		&__add {
+			right: 2px;
+		}
 	}
 }

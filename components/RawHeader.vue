@@ -11,9 +11,9 @@
                 <NuxtLink to="/">
                     <img src="../assets/images/logo.webp" alt="logo" class="logo">
                 </NuxtLink>
-                <a href="#" class="cart">
+                <a class="cart" @click="goToGoodCart">
                     <img class="cart__img" src="../assets/images/cart.svg" alt="cart">
-                    <div class="cart__amount">2</div>
+                    <div class="cart__amount">{{ cartCount }}</div>
                 </a>
                 <HeaderInfo />
             </div>
@@ -27,6 +27,20 @@ const emit = defineEmits(['switchBurger'])
 const switchBurger = () => {
     emit('switchBurger')
 }
+
+const goToGoodCart = () => {
+    closeGoodPopup()
+    openCart()
+}
+
+const cartCount = computed(() => {
+    let count = 0
+    for (const good of goodCart.value) {
+        count += good.count
+    }
+
+    return count
+})
 </script>
 
 <style lang="scss" scoped>

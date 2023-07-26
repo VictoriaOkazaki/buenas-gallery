@@ -39,15 +39,15 @@ import src3 from '../../assets/images/menu-page/menu-3.webp'
 const sliderImgs = [
     {
         src: src1,
-        alt: 'bre'
+        alt: 'breakfast'
     },
     {
         src: src2,
-        alt: 'brghghgje'
+        alt: 'coffee with swetts'
     },
     {
         src: src3,
-        alt: 'brggggggggge'
+        alt: 'pies'
     },
 ]
 const { filters } = useGoods()
@@ -208,6 +208,7 @@ const onAfterLeave = () => {
         object-fit: cover;
         display: flex;
         align-items: center;
+        border-radius: 0px 40px;
     }
 }
 

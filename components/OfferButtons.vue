@@ -1,6 +1,6 @@
 <template>
     <div class="offer__btns">
-        <a href="/reserve" class="offer__btn btn-1">Reserve a&nbsp;table</a>
+        <NuxtLink href="/reserve" class="offer__btn btn-1">Reserve a&nbsp;table</NuxtLink>
         <NuxtLink href="/menu" class="offer__btn btn-2">Order online</NuxtLink>
     </div>
 </template>

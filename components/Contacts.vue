@@ -68,6 +68,9 @@
 &__map {
     position: relative;
 }
+&__map-frame {
+    border-radius: 0px 40px 40px 40px;
+}
 &__map-bg {
     pointer-events: none;
     position: absolute;
@@ -108,6 +111,7 @@
     &__img {
         width: 830px;
         height: 500px;
+        border-radius: 0px 0px 40px 40px;
     }
 
     &__btns {

@@ -6,7 +6,7 @@
         <div class="container">
             <div class="menu__inner">
                 <div class="menu__top">
-                    <NuxtLink href="menu" class="menu__btn btn-2">See all menu</NuxtLink>
+                    <NuxtLink href="menu" class="menu__btn btn-1">See all menu</NuxtLink>
                     <p class="menu__text text">We differentiate ourselves from&nbsp;others by&nbsp;offering a&nbsp;large
                         variety of&nbsp;free range, organic, gluten&nbsp;free and&nbsp;vegan products.</p>
                 </div>

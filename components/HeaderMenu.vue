@@ -55,6 +55,32 @@ if (route.name === 'menu') {
             href: '/menu'
         }
     ]
+} else if (route.name === 'reserve') {
+    links = [
+        {
+            title: 'Home',
+            href: '/'
+        },
+        {
+            title: 'Menu',
+            href: '/menu'
+        }
+    ]
+} else if (route.name === 'reserve-tables') {
+    links = [
+        {
+            title: 'Home',
+            href: '/'
+        },
+        {
+            title: 'Menu',
+            href: '/menu'
+        },
+        {
+            title: 'Timetable',
+            href: '/reserve'
+        }
+    ]
 }
 </script>
 

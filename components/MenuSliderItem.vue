@@ -1,7 +1,7 @@
 <template>
-    <div class="menu__slider-item">
+    <div class="menu__slider-item" @click="showGoodPopup(item)">
         <img :src="item.src" :alt="item.alt" class="menu__slider-img">
-        <img @click="showGoodPopup(item)" class="plus" src="../assets/images/plus.svg" alt="plus">
+        <img class="plus" src="../assets/images/plus.svg" alt="plus">
         <div class="menu__slider-desc">
             <span class="menu__slider-title label">{{ item.title }}</span>
             <span class="menu__slider-price label">{{ item.price }} $</span>

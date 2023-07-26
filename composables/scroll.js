@@ -9,3 +9,11 @@ export const smoothScrollToSection = (elemId) => {
         block: 'start'
     });
 }
+
+export const scrollOnTopOfPage = (smooth = false) => {
+    document.querySelector('body')?.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: smooth ? 'smooth' : 'auto'
+    });
+}

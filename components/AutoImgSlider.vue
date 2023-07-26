@@ -1,7 +1,7 @@
 <template>
     <div>
         <Transition name="opacity" @after-enter="onAfterEnter" @after-leave="onAfterLeave">
-            <img v-show="isShowImg" :src="image.src" :alt="image.alt">
+            <img v-show="isShowImg" :src="image.src" :alt="image.alt" class="img">
         </Transition>
     </div>
 </template>
@@ -46,13 +46,16 @@ const onAfterLeave = async () => {
 </script>
 
 <style lang="scss" scoped>
+.img {
+    border-radius: 0px 40px;
+}
 .opacity-enter-active,
 .opacity-leave-active {
     transition: opacity 1.5s ease-out;
 }
 
 .opacity-enter-from {
-    opacity: 0;
+    opacity: 0.15;
 }
 .opacity-leave-to {
   opacity: 0.15;
