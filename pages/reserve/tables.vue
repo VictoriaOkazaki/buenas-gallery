@@ -25,49 +25,49 @@
 const tables = [
     {
         id: '1',
-        src: '/images/reserve/4.png',
+        src: '/images/reserve/4.webp',
         alt: '4 seats table',
         price: 16
     },
     {
         id: '2',
-        src: '/images/reserve/2.png',
+        src: '/images/reserve/2.webp',
         alt: '2 seats table',
         price: 8
     },
     {
         id: '3',
-        src: '/images/reserve/3.png',
+        src: '/images/reserve/3.webp',
         alt: '3 seats table',
         price: 12
     },
     {
         id: '4',
-        src: '/images/reserve/2.png',
+        src: '/images/reserve/2.webp',
         alt: '2 seats table',
         price: 8
     },
     {
         id: '5',
-        src: '/images/reserve/3.png',
+        src: '/images/reserve/3.webp',
         alt: '3 seats table',
         price: 12
     },
     {
         id: '6',
-        src: '/images/reserve/2.png',
+        src: '/images/reserve/2.webp',
         alt: '2 seats table',
         price: 8
     },
     {
         id: '7',
-        src: '/images/reserve/5.png',
+        src: '/images/reserve/5.webp',
         alt: '5 seats table',
         price: 20
     },
     {
         id: '8',
-        src: '/images/reserve/2.png',
+        src: '/images/reserve/2.webp',
         alt: '2 seats table',
         price: 8
     }
