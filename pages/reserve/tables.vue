@@ -6,12 +6,12 @@
                 <div class="tables__inner">
                     <span class="tables__title title">Choose a table</span>
                     <div class="tables__list">
-                        <div v-for="table in tables" class="tables__item">
+                        <div v-for="table in tables" class="tables__item" @click="chooseTable(table)">
                             <img :src="table.src" :alt="table.alt" class="tables__item-img">
                         </div>
                     </div>
                     <div class="reserve-btn tables__btn-cont">
-                        <span class="tables__price title">8$</span>
+                        <span class="tables__price title">{{ tablePrice }}</span>
                         <NuxtLink to="/payment" class="tables__btn btn-1">Reserve the table</NuxtLink>
                     </div>
                 </div>
@@ -27,51 +27,73 @@ const tables = [
         id: '1',
         src: '/images/reserve/4.webp',
         alt: '4 seats table',
-        price: 16
+        price: 16,
+        person_amount: 4
     },
     {
         id: '2',
         src: '/images/reserve/2.webp',
         alt: '2 seats table',
-        price: 8
+        price: 8,
+        person_amount: 2
     },
     {
         id: '3',
         src: '/images/reserve/3.webp',
         alt: '3 seats table',
-        price: 12
+        price: 12,
+        person_amount: 3
     },
     {
         id: '4',
         src: '/images/reserve/2.webp',
         alt: '2 seats table',
-        price: 8
+        price: 8,
+        person_amount: 2
     },
     {
         id: '5',
         src: '/images/reserve/3.webp',
         alt: '3 seats table',
-        price: 12
+        price: 12,
+        person_amount: 3
     },
     {
         id: '6',
         src: '/images/reserve/2.webp',
         alt: '2 seats table',
-        price: 8
+        price: 8,
+        person_amount: 2
     },
     {
         id: '7',
         src: '/images/reserve/5.webp',
         alt: '5 seats table',
-        price: 20
+        price: 20,
+        person_amount: 5
     },
     {
         id: '8',
         src: '/images/reserve/2.webp',
         alt: '2 seats table',
-        price: 8
+        price: 8,
+        person_amount: 2
     }
 ]
+
+const reserveData = useState('reserveData')
+
+console.log('tables', reserveData.value)
+const tablePrice = ref('')
+
+const chooseTable = (table) => {
+    reserveData.value.tableId = 'table ' + table.id,
+    reserveData.value.tableDesc = table.person_amount + ' persons',
+    tablePrice.value = table.price + '$',
+    reserveData.value.price = table.price
+}
+
+
 </script>
 
 <style lang="scss" scoped>

@@ -50,7 +50,7 @@ const activeGood = ref(filteredGoods.value[0])
 .underline {
     @extend %border;
     height: 1px;
-    width: -webkit-fill-available;
+    flex-grow: 1;
 }
 
 .active {
@@ -200,7 +200,6 @@ const activeGood = ref(filteredGoods.value[0])
         }
     }
 }
-
 @media (max-width: 1200px) {
     .plus {
         width: 86px;

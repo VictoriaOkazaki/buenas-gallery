@@ -1,5 +1,6 @@
 export const isShowGoodPopup = ref(false)
 export const goodPopupData = ref(null)
+
 export const showGoodPopup = (good) => {
     isShowGoodPopup.value = true
     goodPopupData.value = good

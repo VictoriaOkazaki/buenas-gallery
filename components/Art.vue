@@ -60,16 +60,7 @@ const slides = [
         alt1: 'Saturn in my vision',
         alt2: 'Geometric eye',
         alt3: 'Four geometric worlds'
-    },
-    {
-        title: 'Lucy Peck - Geometric inner universe3',
-        src1: 'images/art/art1-1.webp',
-        src2: 'images/art/art1-2.webp',
-        src3: 'images/art/art1-3.webp',
-        alt1: 'Saturn in my vision',
-        alt2: 'Geometric eye',
-        alt3: 'Four geometric worlds'
-    },
+    }
 ]
 
 const getSlidesPerView = () => 1

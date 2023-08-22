@@ -9,7 +9,7 @@
                             <span class="popup__good-title label">{{ goodPopupData.title }}</span>
                             <span class="popup__good-price label">{{ goodPopupData.price }} x {{ initialCount }} -> {{ roundPrice(goodPopupData.price * initialCount) }}</span>
                         </div>
-                        <p class="popup__good-ingredient text">Coffee, milk</p>
+                        <p class="popup__good-ingredient text">Ingredient 1, Ingredient 2, Ingredient 3</p>
                         <div class="popup__good-amount">
                             <button class="popup__good-amount-change" @click="addCount">
                                 <img src="../assets/images/plus.svg" alt="plus" class="popup__good-amount-change-plus">

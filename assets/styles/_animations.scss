@@ -48,6 +48,16 @@
     }
 }
 
+@keyframes showX {
+    0% {
+        transform: scaleX(0.2);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 @keyframes hide {
     0% {
         transform: scaleY(1);

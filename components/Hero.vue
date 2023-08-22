@@ -43,6 +43,7 @@
         position: absolute;
         right: 0;
         top: 0;
+        animation: appear 1.5s ease-out;
     }
 
     &-bottom {

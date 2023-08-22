@@ -8,12 +8,10 @@
                     the&nbsp;cafe.</p>
                 <div class="timetable__inner">
                     <div class="timetable__days">
-                        <div v-for="day in days" class="timetable__day">
-                            <span class="timetable__day-title">{{ day.name }}</span>
-                            <span class="timetable__day-date">{{ day.date }}</span>
-                        </div>
+                        <ReserveDay v-for="day in days" :day="day" :active="activeDay === day" @click="setActiveDay(day)"
+                            @chooseHour="chooseHour" />
                     </div>
-                    <NuxtLink href="../reserve/tables" class="reserve-btn btn-1">Choose a table</NuxtLink>
+                    <NuxtLink :class="{'disabled': !reserveData}" to="../reserve/tables" class="reserve-btn btn-1">Choose a table</NuxtLink>
                 </div>
             </div>
         </section>
@@ -22,46 +20,84 @@
 </template>
 
 <script setup>
-const days = [
-    {
-        name: 'Monday',
-        date: 'July 10',
-        chosen: false
-    },
-    {
-        name: 'Tuesday',
-        date: 'July 11',
-        chosen: false
-    },
-    {
-        name: 'Wednesday',
-        date: 'July 12',
-        chosen: false
-    },
-    {
-        name: 'Thursday',
-        date: 'July 13',
-        chosen: false
-    },
-    {
-        name: 'Friday',
-        date: 'July 14',
-        chosen: false
-    },
-    {
-        name: 'Saturday',
-        date: 'July 15',
-        chosen: false
-    },
-    {
-        name: 'Sunday',
-        date: 'July 16',
-        chosen: false
+import dayjs from 'dayjs'
+
+function getHours() {
+    const hours = []
+
+    const STEP_HOUR = 2
+    let fromHour = 10
+    const CLOSE_HOUR = 25
+
+    const addHour = (fromHour, toHour) => {
+        fromHour = fromHour % 24
+        toHour = toHour % 24
+
+        // TODO: dont add chosen hour range
+        hours.push(`${fromHour}:00 - ${toHour}:00`)
     }
-]
+
+    while (fromHour < CLOSE_HOUR) {
+        let toHour = fromHour + STEP_HOUR
+        if (toHour > CLOSE_HOUR) {
+            toHour = CLOSE_HOUR
+        }
+        addHour(fromHour, toHour)
+        fromHour = toHour
+    }
+
+    return hours
+}
+
+function get7Days() {
+    const days = []
+    let curDay = dayjs()
+    while (days.length !== 7) {
+        days.push({
+            name: curDay.format('dddd'),
+            date: curDay.format('MMMM D'),
+            hours: getHours(),
+            activeHour: null
+        })
+        curDay = curDay.add(1, 'day')
+    }
+    return days
+}
+const days = ref(get7Days())
+
+const activeDay = ref(null)
+const setActiveDay = (day) => {
+    if (activeDay.value === day) {
+        return
+    }
+    for (const curDay of days.value) {
+        curDay.activeHour = null
+    }
+    activeDay.value = day
+}
+const reserveData = useState('reserveData')
+reserveData.value = null
+const chooseHour = (range) => {
+    activeDay.value.activeHour = range
+
+    reserveData.value = {
+        date: activeDay.value.date,
+        hour: activeDay.value.activeHour,
+    }
+    console.log("reservedta", reserveData.value)
+    // setTimeout case setActiveDay call set activeDay
+    setTimeout(() => {
+        activeDay.value = null
+    }, 0)
+}
 </script>
 
 <style lang="scss" scoped>
+.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: none;
+}
 span,
 p {
     font-family: Delius Swash Caps, cursive;
@@ -88,34 +124,6 @@ p {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 60px 90px;
-    }
-
-    &__day {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 251px;
-        height: 328px;
-        background-image: url(../../assets/images/circle.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        cursor: pointer;
-
-        &:hover {
-            background-image: url(../../assets/images/circle-bg.svg);
-            transition: all .8s ease-out;
-        }
-    }
-
-    &__day-title {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
-
-    &__day-date {
-        font-size: 28px;
     }
 }
 
