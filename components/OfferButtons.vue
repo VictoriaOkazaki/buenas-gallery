@@ -13,7 +13,7 @@
 .offer {
     &__btns {
         display: flex;
-        animation: appearFromBottom 1.5s ease-out 1s;
+        animation: appearFromBottom 1.5s ease-out 1.5s;
         animation-fill-mode: both;
     }
 

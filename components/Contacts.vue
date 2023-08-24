@@ -6,14 +6,14 @@
         <div class="container">
             <div class="contacts__inner">
                 <div class="contacts__content">
-                    <div class="contacts__map">
+                    <div class="contacts__map" ref="contactMap">
                         <iframe class="contacts__map-frame" title="Art cafe"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2470.0041694523543!2d-1.262249823548184!3d51.7512473218698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a517c88c63%3A0xa076d20f99ccfb99!2sArt%20Cafe!5e0!3m2!1sru!2saz!4v1685538358894!5m2!1sru!2saz"
                             width="830" height="500" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <div class="contacts__map-bg"></div>
                     </div>
-                    <div class="contacts__content-block">
+                    <div class="contacts__content-block" ref="contactText1">
                         <h3 class="contacts__subtitle contacts__subtitle-1">Brentwood, 3601 Farm Meadow Drive</h3>
                         <h3 class="contacts__subtitle contacts__subtitle-2">+1 205-538-1468</h3>
                         <p class="contacts__text contacts__text-1 text">Drop in to relax and get enjoy reading the best
@@ -26,13 +26,13 @@
                     </div>
                 </div>
                 <div class="contacts__content">
-                    <div class="contacts__content-block">
+                    <div class="contacts__content-block" ref="contactText2">
                         <h3 class="contacts__subtitle contacts__subtitle-1">We’re open everyday from 10:00 to 1:00</h3>
                         <p class="contacts__text contacts__text-3 text">The kitchen stops working 30 minutes before the cafe
                             closes.</p>
                         <OfferButtons class="contacts__btns" />
                     </div>
-                    <img src="../assets/images/contact.webp" alt="cafe terraced street" class="contacts__img">
+                    <img src="../assets/images/contact.webp" alt="cafe" class="contacts__img" ref="contactImg">
                 </div>
             </div>
         </div>
@@ -40,7 +40,40 @@
 </template>
 
 <script setup>
+const contactMap = ref()
+const contactText1 = ref()
+const contactText2 = ref()
+const contactImg = ref()
 
+useIntersection(contactMap, (entry) => {
+    entry.target.style.animation = "appearFromLeft 1.5s ease-out"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+
+useIntersection(contactText1, (entry) => {
+    entry.target.style.animation = "show 1.5s ease-out"
+    entry.target.style.transformOrigin = "top"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+
+useIntersection(contactImg, (entry) => {
+    entry.target.style.animation = "appearFromLeft 1.5s ease-out"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+
+useIntersection(contactText2, (entry) => {
+    entry.target.style.animation = "show 1.5s ease-out"
+    entry.target.style.transformOrigin = "top"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style lang="scss" scoped>
@@ -65,21 +98,25 @@
             align-items: center;
         }
     }
-&__map {
-    position: relative;
-}
-&__map-frame {
-    border-radius: 0px 40px 40px 40px;
-}
-&__map-bg {
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(0deg, rgba(255, 212, 193, 0.3), rgba(255, 212, 193, 0.3));
-}
+
+    &__map {
+        position: relative;
+    }
+
+    &__map-frame {
+        border-radius: 0px 40px 40px 40px;
+    }
+
+    &__map-bg {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(0deg, rgba(255, 212, 193, 0.3), rgba(255, 212, 193, 0.3));
+    }
+
     &__content-block {
         width: 41%;
     }
@@ -172,19 +209,22 @@
         &__content {
             margin-top: 80px;
         }
+
         &__content-block {
             transform: translateX(30%);
             width: 69%;
         }
 
         &__map,
-        &__img{
+        &__img {
             margin-bottom: 50px;
             width: 100%;
         }
-        &__map-frame  {
+
+        &__map-frame {
             width: 100%;
         }
+
         &__img {
             height: auto;
         }
@@ -198,94 +238,115 @@
         }
     }
 }
+
 @media (max-width: 1000px) {
     .contacts {
         &__inner {
             margin-bottom: 150px;
         }
+
         &__title-cont {
             padding-bottom: 10px;
             padding-left: 80px;
         }
+
         &__content {
             margin-top: 60px;
         }
+
         &__content-block {
             transform: translateX(18%);
             width: 76%;
         }
-&__subtitle {
-    font-size: 21px;
-    line-height: 32px;
-}
+
+        &__subtitle {
+            font-size: 21px;
+            line-height: 32px;
+        }
+
         &__map,
         &__img {
             margin-bottom: 30px;
         }
+
         &__text-1 {
             margin-bottom: 10px;
         }
+
         &__subtitle-1 {
             margin-bottom: 5px;
         }
     }
 }
+
 @media (max-width: 768px) {
     .contacts {
         &__inner {
             margin-bottom: 80px;
         }
+
         &__title-cont {
             width: 48%;
             padding-left: 60px;
         }
+
         &__content {
             margin-top: 40px;
         }
+
         &__content-block {
             transform: translateX(0);
             width: 100%;
         }
+
         &__subtitle {
-    font-size: 18px;
-    line-height: 27px;
-}
+            font-size: 18px;
+            line-height: 27px;
+        }
+
         &__map,
         &__img {
             margin-bottom: 30px;
         }
+
         &__map-frame {
             height: 370px;
         }
+
         &__map-frame {
             height: 270px;
         }
+
         &__text-3 {
             margin-top: 15px;
         }
+
         &__subtitle-1 {
             margin-bottom: 5px;
         }
+
         &__btns {
             margin-top: 40px;
         }
     }
 }
+
 @media (max-width: 500px) {
     .contacts {
         &__title-cont {
             padding-left: 40px;
         }
+
         &__map-frame {
             height: 220px;
         }
     }
 }
+
 @media (max-width: 400px) {
     .contacts {
         &__map-frame {
             height: 170px;
         }
     }
-}
-</style>
+}</style>

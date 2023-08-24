@@ -6,7 +6,7 @@
         <div class="container">
             <div class="gallery__inner">
                 <div class="gallery__content">
-                    <div id="gallery-imgs" class="gallery__imgs">
+                    <div ref="galleryImgs" class="gallery__imgs">
                         <div class="gallery__imgs-list gallery__imgs-list1">
                             <img src="../assets/images/gallery/gal1-1.webp" alt="building"
                                 class="gallery__img gallery__img-ver">
@@ -35,15 +35,15 @@
 </template>
 
 <script setup>
-onMounted(() => {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            const intersecting = entry.isIntersecting
-            entry.target.style.animation =  intersecting ? "showX 1.5s ease-out" : "none"
-        })
-    })
+const galleryImgs = ref()
 
-    observer.observe(document.getElementById("gallery-imgs"))
+useIntersection(galleryImgs, (entry) => {
+    entry.target.style.animation = "show 1.5s ease-out"
+    entry.target.style.animationFillMode = "both"
+    entry.target.style.transformOrigin = "top"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
 })
 </script>
 
@@ -267,4 +267,5 @@ onMounted(() => {
             position: initial;
         }
     }
-}</style>
+}
+</style>

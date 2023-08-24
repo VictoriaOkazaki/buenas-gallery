@@ -119,6 +119,11 @@ span {
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        &:active,
+        &:hover {
+            opacity: 60%;
+        }
     }
 
     &__item-img {

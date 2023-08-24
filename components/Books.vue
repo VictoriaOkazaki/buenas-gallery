@@ -8,7 +8,7 @@
                             <div class="books__title-cont">
                                 <h2 class="books__title title">Most popular books</h2>
                             </div>
-                            <ul class="books__list">
+                            <ul class="books__list" ref="bookList1">
                                 <li class="books__list-item span">Keziah Dennis - Defender Of History</li>
                                 <li class="books__list-item span">Hannah Macias - Enemy Of Joy</li>
                                 <li class="books__list-item span">Willie Clayton - Gods Of Power</li>
@@ -30,7 +30,7 @@
                         <img src="../assets/images/books-2.webp" alt="a book and a cup of coffee" class="books__img">
                     </div>
                     <div class="books__list-cont" id="book-4">
-                        <ul class="books__list">
+                        <ul class="books__list" ref="bookList2">
                             <li class="books__list-item span">Azaan Klein - Cat Of The Day</li>
                             <li class="books__list-item span">Theodore Ballard - Invited By A Storm</li>
                             <li class="books__list-item span">Xander Booker - Companion Of My Imagination</li>
@@ -50,7 +50,24 @@
 </template>
 
 <script setup>
+const bookList1 = ref()
+const bookList2 = ref()
 
+useIntersection(bookList1, (entry) => {
+    entry.target.style.animation = "show 1.5s ease-out"
+    entry.target.style.transformOrigin = "top"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+
+useIntersection(bookList2, (entry) => {
+    entry.target.style.animation = "show 1.5s ease-out"
+    entry.target.style.transformOrigin = "top"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style lang="scss" scoped>

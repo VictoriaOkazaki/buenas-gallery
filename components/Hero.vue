@@ -52,6 +52,8 @@
         margin-top: 60px;
         margin-left: -30px;
         position: relative;
+        animation: appearFromBottom 1.5s ease-out 2s;
+        animation-fill-mode: both;
     }
 
     &-bottom-antiborder {
@@ -77,6 +79,7 @@
 
 .offer {
     width: 46%;
+    animation: appearFromLeft 1.5s ease-out;
 
     &__title {
         font-family: 'Dancing Script', cursive;

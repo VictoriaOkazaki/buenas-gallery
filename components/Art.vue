@@ -5,7 +5,7 @@
         </div>
         <div class="container">
             <div class="art__inner">
-                <div class="art__slider">
+                <div class="art__slider" ref="artSlider">
                     <Slider :slides="slides" :getSlidesPerView="getSlidesPerView">
                         <template v-slot="slotProps">
                             <div class="art__slider-cont">
@@ -21,7 +21,7 @@
                         </template>
                     </Slider>
                 </div>
-                <div class="art__text-cont">
+                <div class="art__text-cont" ref="artText">
                     <p class="art__text text">There is nothing better than enjoying a&nbsp;cup&nbsp;of&nbsp;coffee and
                         appreciating some&nbsp;art. We&nbsp;frequently collaborate with&nbsp;local artists
                         to&nbsp;help&nbsp;them gain a&nbsp;little&nbsp;more visibility, and of&nbsp;course, to&nbsp;make
@@ -44,27 +44,44 @@ const slides = [
         alt3: 'Four geometric worlds'
     },
     {
-        title: 'Lucy Peck - Geometric inner universe2',
-        src1: 'images/art/art1-1.webp',
-        src2: 'images/art/art1-2.webp',
-        src3: 'images/art/art1-3.webp',
-        alt1: 'Saturn in my vision',
-        alt2: 'Geometric eye',
-        alt3: 'Four geometric worlds'
+        title: 'Jenny Morgan - Old America',
+        src1: 'images/art/art2-1.webp',
+        src2: 'images/art/art2-2.webp',
+        src3: 'images/art/art2-3.webp',
+        alt1: '600 Bar & Café, Miles City, Montana',
+        alt2: '5 Min. Car Wash Date',
+        alt3: '14th Street, looking towards Ohio River, Wheeling, W. Va.'
     },
     {
-        title: 'Lucy Peck - Geometric inner universe3',
-        src1: 'images/art/art1-1.webp',
-        src2: 'images/art/art1-2.webp',
-        src3: 'images/art/art1-3.webp',
-        alt1: 'Saturn in my vision',
-        alt2: 'Geometric eye',
-        alt3: 'Four geometric worlds'
+        title: 'Collin Race - Wild and Peace',
+        src1: 'images/art/art3-1.webp',
+        src2: 'images/art/art3-2.webp',
+        src3: 'images/art/art3-3.webp',
+        alt1: 'Insects and Fruit',
+        alt2: 'Walking fox',
+        alt3: 'Brown Hawk Owl'
     }
 ]
 
 const getSlidesPerView = () => 1
 
+const artSlider = ref()
+const artText = ref()
+
+useIntersection(artSlider, (entry) => {
+    entry.target.style.animation = "appearFromLeftAndScale 2s ease-out"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+
+useIntersection(artText, (entry) => {
+    entry.target.style.animation = "appearFromBottom 1.5s ease-out .5s"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style lang="scss" scoped>

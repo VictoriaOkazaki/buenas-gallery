@@ -11,7 +11,8 @@
                         <ReserveDay v-for="day in days" :day="day" :active="activeDay === day" @click="setActiveDay(day)"
                             @chooseHour="chooseHour" />
                     </div>
-                    <NuxtLink :class="{'disabled': !reserveData}" to="../reserve/tables" class="reserve-btn btn-1">Choose a table</NuxtLink>
+                    <NuxtLink :class="{ 'disabled': !reserveData }" to="../reserve/tables" class="reserve-btn btn-1">Choose a
+                        table</NuxtLink>
                 </div>
             </div>
         </section>
@@ -98,6 +99,7 @@ const chooseHour = (range) => {
     pointer-events: none;
     cursor: none;
 }
+
 span,
 p {
     font-family: Delius Swash Caps, cursive;
@@ -147,19 +149,6 @@ p {
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 40px 60px;
         }
-
-        &__day {
-            width: 214px;
-            height: 280px;
-        }
-
-        &__day-title {
-            font-size: 34px;
-        }
-
-        &__day-date {
-            font-size: 21px;
-        }
     }
 }
 
@@ -167,19 +156,6 @@ p {
     .timetable {
         &__days {
             grid-gap: 40px 40px;
-        }
-
-        &__day {
-            width: 180px;
-            height: 236px;
-        }
-
-        &__day-title {
-            font-size: 30px;
-        }
-
-        &__day-date {
-            font-size: 18px;
         }
     }
 }
@@ -199,26 +175,6 @@ p {
             align-items: flex-start;
             justify-content: space-around;
             position: relative;
-        }
-
-        &__day {
-            width: 183px;
-            height: 140px;
-            background-image: url(../../assets/images/circle-rev.svg);
-
-            &:nth-child(3),
-            &:nth-child(4),
-            &:last-child {
-                align-self: flex-end;
-            }
-        }
-
-        &__day-title {
-            font-size: 28px;
-        }
-
-        &__day-date {
-            font-size: 16px;
         }
     }
 }

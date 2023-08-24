@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="container footer-cont">
-            <img src="../assets/images/footer-img.webp" alt="coffee cuo & cafe logo" class="footer__img">
+            <img ref="footerImg" src="../assets/images/footer-img.webp" alt="coffee cuo & cafe logo" class="footer__img">
             <div class="footer__inner">
                 <span class="footer__copyright label">@2023 Buendia’s Gallery. All rights reserved.</span>
                 <div class="footer__social">
@@ -27,7 +27,15 @@
 </template>
 
 <script setup>
+const footerImg = ref()
 
+useIntersection(footerImg, (entry) => {
+    entry.target.style.animation = "show 1.5s ease-out"
+    entry.target.style.transformOrigin = "bottom center"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style lang="scss" scoped>
