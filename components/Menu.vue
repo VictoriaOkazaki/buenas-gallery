@@ -298,12 +298,11 @@ useIntersection(menuFilters, (entry) => {
 @media (max-width: 700px) {
     .slider-points {
         position: absolute;
-        right: 10px;
+        right: -40px;
     }
 }
 @media (max-width: 400px) {
     .slider-points {
-        right: 0;
         height: 86px;
     }
 }

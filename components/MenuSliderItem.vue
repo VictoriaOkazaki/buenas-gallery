@@ -51,8 +51,10 @@ defineProps({
         background: $text-color-light;
         border-radius: 40px;
         padding: 12px 24px;
+        height: 120px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     &__slider-price {
@@ -76,6 +78,9 @@ defineProps({
             height: 292px;
             margin-bottom: 20px;
         }
+        &-desc {
+            height: 100px;
+        }
     }
 }
 
@@ -98,7 +103,7 @@ defineProps({
         }
 
         &__slider-desc {
-            padding: 12px 14px;
+            height: 80px;
         }
     }
 }
