@@ -163,6 +163,13 @@ button {
 	right: 163px;
 }
 
+.reserve-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: none;
+	background-color: $acsent-color !important;
+}
+
 /* media */
 
 @media (max-width: 1600px) {

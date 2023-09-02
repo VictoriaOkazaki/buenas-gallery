@@ -11,7 +11,7 @@
                         <ReserveDay v-for="day in days" :day="day" :active="activeDay === day" @click="setActiveDay(day)"
                             @chooseHour="chooseHour" />
                     </div>
-                    <NuxtLink :class="{ 'disabled': !reserveData }" to="../reserve/tables" class="reserve-btn btn-1">Choose a
+                    <NuxtLink :class="{ 'reserve-disabled': !reserveData }" to="../reserve/tables" class="reserve-btn btn-1">Choose a
                         table</NuxtLink>
                 </div>
             </div>
@@ -94,11 +94,6 @@ const chooseHour = (range) => {
 </script>
 
 <style lang="scss" scoped>
-.disabled {
-    opacity: 0.4;
-    pointer-events: none;
-    cursor: none;
-}
 
 span,
 p {

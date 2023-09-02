@@ -23,7 +23,8 @@
                         v-model:isOpen="paymentOpen" />
                     <div v-if="!paymentOpen" class="select">
                         <div v-if="paymentMethod" class="select__text label">{{ paymentMethod.title }}</div>
-                        <NuxtLink to="/payment" v-if="paymentMethod?.id === 'online_card'" class="select__btn btn-2">Go to
+                        <NuxtLink to="/payment?type=order" v-if="paymentMethod?.id === 'online_card'"
+                            class="select__btn btn-2">Go to
                             payment -></NuxtLink>
                     </div>
                 </div>
@@ -41,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <NuxtLink href="/payment" class="btn-1">Send</NuxtLink>
+            <NuxtLink href="/payment?type=order" class="btn-1">Send</NuxtLink>
         </div>
     </section>
 </template>
@@ -242,6 +243,7 @@ input {
     .select {
         align-items: center;
     }
+
     .order {
         &__inner {
             margin: 90px 0 120px;

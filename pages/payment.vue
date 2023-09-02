@@ -2,17 +2,37 @@
     <section class="payment">
         <div class="container">
             <div class="payment__inner">
-                <span class="label">There will be a payment service. Payment amount: {{ roundPrice(totalCartPrice)
-                }}$</span>
+                <span class="label">There will be a payment service. Payment amount: {{ price }}$</span>
                 <img src="../assets/images/bank-card.webp" alt="bank card" class="payment__img">
-                <a href="" class="btn-1">Press like you pay</a>
+                <button @click="pay" class="btn-1">Press like you pay</button>
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
+const paymentData = useState('paymentData')
+const route = useRoute()
+const router = useRouter()
 
+const type = route.query.type
+
+const price = ref(0)
+if (type === 'order') {
+    price.value = roundPrice(totalCartPrice.value)
+} else if (type === 'booking' && paymentData.value) {
+    price.value = paymentData.value.price
+}
+
+const pay = () => {
+    if (!price.value) return
+    console.log('success payment', price.value)
+    if (type === 'order') {//cart payment
+        router.push('/order')
+    } else if (type === 'booking') {
+        router.push('/reserve/reserve-success')
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -49,4 +69,5 @@
         width: 271px;
         height: 171px;
     }
-}</style>
+}
+</style>

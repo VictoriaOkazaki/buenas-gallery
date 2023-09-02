@@ -7,8 +7,9 @@
                     <div class="success__info">
                         <div class="success__info-text">
                             <p class="success__info-text text">Your booking is&nbsp;complete.</p>
-                            <p class="success__info-text text">Reserve details: 2&nbsp;persons, July&nbsp;10,
-                                18:00&nbsp;—&nbsp;22:00, table&nbsp;4</p>
+                            <p v-if="reserveData" class="success__info-text text">Reserve details: {{reserveData.tableDesc}}, {{reserveData.date}},
+                                {{ reserveData.hour }}, {{ reserveData.tableId }}</p>
+                                <p class="success__info-text text" v-else>Data not found</p>
                         </div>
                         <button class="success__info-btn btn-1">Send to email</button>
                     </div>
@@ -20,6 +21,7 @@
 </template>
 
 <script setup>
+const reserveData = useState('reserveData')
 </script>
 
 <style lang="scss" scoped>
